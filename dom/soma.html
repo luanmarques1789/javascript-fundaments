@@ -47,7 +47,7 @@
       var soma = document.querySelector("input#somaEvent");
       var res = document.querySelector("div#res");
       // DOM events
-      soma.addEventListener('click', somar)
+      soma.addEventListener("click", somar);
       //soma.addEventListener(, somar)
 
       function somar() {
@@ -55,7 +55,7 @@
         var n2 = Number(document.querySelector("input#txtBox2").value);
         var result = n1 + n2;
         res.innerHTML = `<strong>Resultado:</strong> A soma ${n1} + ${n2} é igual a ${result}.`;
-        console.log('Escreve alguma coisa')
+        console.log("Escreve alguma coisa");
       }
     </script>
   </body>

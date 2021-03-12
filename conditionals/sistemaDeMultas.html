@@ -6,24 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Multas</title>
 
+<style>
+
+    body {
+        background-color: rgba(0, 255, 255, 0.452);
+    }
+
+    section {
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+
+    div#res {
+        margin-top: 20px;
+    }
+
+    input#txt {
+        margin-left: 5px;
+    }
+    
+    input#verificar {
+        margin-left: 12px;
+    }
+
+</style>
+
 </head>
 <body>
-    Velocidade do carro: <input type='number' id='txt'></input> km/h
+    <section>
+    Velocidade do carro: <input type="number" id="txt"> km/h
+    <input type="button" value="Verificar" id="verificar">
     
+    <div id='res'></div>
     
-    <div id='res'>
-        
-    </div>
+    </section>
+    
     <script>
-        txt.addListenerEvent('click', calcVel)
-        var txt = document.querySelector('input#txt')
-        var vel = txt.value
-        var res = document.querySelector('div#res') 
+        var verificar = document.querySelector('input#verificar')
+        verificar.addEventListener('click', calcVel())
         
         function calcVel(){
-            if (txt > 90){
-                
+            
+            if (vel > 90){
+                var txt = document.querySelector('input#txt')
+                var vel = Number(txt.value) 
+                var res = document.querySelector('div#res') 
+                res.innerHTML = `Você ultrapassou o limite de velocidade. MULTADO!`
+                console.log('true')
             }
+            res.innerHTML = 'Dirija sempre com o cinto de segurança!'
         }
 
     </script>
