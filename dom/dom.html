@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Document</title>
+    <style>
+        body {
+            background-color: yellow;
+            font: normal 20pt helvetica;
+
+        }
+
+        h1 {
+            color: white;
+            font: bold 50pt Arial;
+            text-align: center;
+
+        }
+
+        p {
+            font: italic 20pt helvetica;
+            margin-right: 5%;
+            margin-left: 5%;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        DOM!
+    </h1>
+
+    <div>
+        <h1 id='msg'>
+            Click me
+        </h1>
+
+        <p> Este módulo trata a respeito de estudos sobre o <strong>DOM</strong>. </p>
+
+        <p> O Document Object Model ou simplesmente DOM é utilizado pelo navegador Web para representar a sua página
+            Web. Quando altera-se esse modelo com o uso do Javascript altera-se também a página Web. É muito mais
+            fácil trabalhar com DOM do que diretamente com código HTML ou CSS.</p>
+    </div>
+
+    <div id='footer'>
+
+        <p> Obrigado por ler!</p>
+
+    </div>
+    <A href> url </A>
+    <br>
+
+    <script>
+        var url = document.URL
+        //window.document.write(window.navigator.appVersion)
+        var nameBrowser = window.navigator.appCodeName
+        document.write(window.document.charset)
+
+        //var p0 = document.getElementsByTagName('p')
+        //document.write("</br>" + p0.innerText) // Duplicated 
+
+        var msg = document.getElementById('msg') // h1
+        msg.style.color = 'black'
+        msg.style.fontSize = '30pt'
+
+        var footer = document.getElementById('footer') // div
+        //footer.style.fontSize = '10pt'
+        footer.style.color = 'red'
+
+
+
+
+    </script>
+
+</body>
+
+</html>

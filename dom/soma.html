@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <style>
+      body {
+        background-color: bisque;
+      }
+
+      h1#title {
+        margin-left: 15%;
+        word-spacing: 1mm;
+      }
+
+      div#soma {
+        margin-left: 10%;
+        font: normal 20pt Arial;
+      }
+
+      div#res {
+        font: normal 20pt Arial;
+        margin-left: 10%;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="soma">
+      <h1 name="title" id="title">Soma aritmética</h1>
+
+      <div name="soma" id="soma">
+        <input type="number" name="txtBox1" id="txtBox1" /> +
+        <input type="number" name="txtBox2" id="txtBox2" />
+        <input type="button" value="Somar" name="somaEvent" id="somaEvent" />
+      </div>
+
+      <div name="res" id="res">
+        <strong>Resultado:</strong>
+      </div>
+    </section>
+
+    <script>
+      var soma = document.querySelector("input#somaEvent");
+      var res = document.querySelector("div#res");
+      // DOM events
+      soma.addEventListener('click', somar)
+      //soma.addEventListener(, somar)
+
+      function somar() {
+        var n1 = Number(document.querySelector("input#txtBox1").value);
+        var n2 = Number(document.querySelector("input#txtBox2").value);
+        var result = n1 + n2;
+        res.innerHTML = `<strong>Resultado:</strong> A soma ${n1} + ${n2} é igual a ${result}.`;
+        console.log('Escreve alguma coisa')
+      }
+    </script>
+  </body>
+</html>
