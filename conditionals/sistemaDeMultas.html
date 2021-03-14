@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistema de Multas</title>
 
-<style>
-
-    body {
-        background-color: rgba(0, 255, 255, 0.452);
-    }
-
-    section {
-        margin-top: 30px;
-        margin-left: 20px;
-    }
-
-    div#res {
-        margin-top: 20px;
-    }
-
-    input#txt {
-        margin-left: 5px;
-    }
-    
-    input#verificar {
-        margin-left: 12px;
-    }
-
-</style>
-
-</head>
-<body>
-    <section>
-    Velocidade do carro: <input type="number" id="txt"> km/h
-    <input type="button" value="Verificar" id="verificar">
-    
-    <div id='res'></div>
-    
-    </section>
-    
-    <script>
-        var verificar = document.querySelector('input#verificar')
-        verificar.addEventListener('click', calcVel())
-        
-        function calcVel(){
-            
-            if (vel > 90){
-                var txt = document.querySelector('input#txt')
-                var vel = Number(txt.value) 
-                var res = document.querySelector('div#res') 
-                res.innerHTML = `Você ultrapassou o limite de velocidade. MULTADO!`
-                console.log('true')
-            }
-            res.innerHTML = 'Dirija sempre com o cinto de segurança!'
+    <style>
+        body {
+            background-color: rgba(0, 255, 255, 0.452);
         }
 
-    </script>
+        section {
+            margin-top: 30px;
+            margin-left: 20px;
+        }
 
+        div#res {
+            margin-top: 20px;
+        }
+
+        input#txt {
+            margin-left: 5px;
+        }
+
+        input#verificar {
+            margin-left: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        Velocidade do carro: <input type="number" id="txt" /> km/h
+        <input type="button" value="Verificar" id="verificar" />
+
+        <div id="res"></div>
+    </section>
+
+    <script>
+        verificar = document.querySelector("input#verificar");
+        verificar.addEventListener("click", calcVel);
+
+        /* 
+        Embora não se possa colocar um par de parentêses após de calVel, 
+        entretanto ela ainda continua sendo uma função
+        */
+
+        res = document.querySelector("div#res");
+
+        function calcVel(vel) {
+            txt = document.querySelector("input#txt");
+            vel = Number(txt.value);
+            res.innerHTML = `<p>Sua velocidade é de ${vel} km/h</p>`;
+
+            if (vel > 60 && !(vel < 0)) {
+                res.innerHTML += `<p>Você ultrapassou o limite de velocidade. <strong>MULTADO!</strong></p>`;
+                console.log("true");
+            }
+            res.innerHTML += `<p>Dirija sempre com o cinto de segurança!</p>`;
+        }
+
+
+    </script>
 </body>
+
 </html>
