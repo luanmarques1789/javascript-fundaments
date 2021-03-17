@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Naturalidade</title>
+
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="entrada">
+
+        Digite a sua nacionalidade: <input type="text" id="txt">
+        <input type="button" value="Verificar" onclick="showNat()">
+        <!A função precisar ter um par de parênteses>
+
+    </div>
+    <div id="saida">
+
+    </div>
+
+    <script>
+        var saida = document.querySelector("div#saida");
+        var nacionalidade = document.querySelector("input#txt");
+
+        function showNat(nacionalidade) {
+
+            saida.innerHTML = `<p>Fora da condição</p>`;
+            if (nacionalidade == "br") {
+                saida.innerHTML += `<p>Brasileiro</p>`;
+                console.log("true");
+
+            } else {
+                saida.innerHTML += `<p>Estrangeiro</p>`;
+                console.log("false");
+            }
+
+        }
+    </script>
+</body>
+
+</html>

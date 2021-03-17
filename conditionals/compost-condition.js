@@ -1,4 +1,4 @@
-var country = 'Brasil'
+var country = 'sdds'
 if(country != 'Brasil'){
     console.log('Você é estrangeiro!')
 } else {
