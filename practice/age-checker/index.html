@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Age Checker</h1>
+    </header>
+
+    <section>
+        <div>
+            <p> Year of Birth:
+                <input type="number" name="inYear" id="inYear" min="1915">
+            </p>
+
+            <p> Sex:
+
+                <!-- Seleção para masculino -->
+                <input type="radio" name="sex" id="masc" checked>
+                <!--Rótulo-->
+                <label for="masc"> Masculine </label>
+
+                <!-- Seleção para feminino -->
+                <input type="radio" name="sex" id="fem">
+                <label for="fem"> Feminine </label>
+
+                <! !OBSERVAÇÃO¡ É necessário que ambos os radios possuam o mesmo nome, senão será possével selecionar as
+                    suas caixas>
+
+                    <p>
+                        <input type="button" value="Check" onclick="verifyData()">
+                    </p>
+
+            </p>
+
+        </div>
+
+        <div id="res">
+            <p> Fill the values above for seeing the result! </p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; Luma </p>
+    </footer>
+
+    <script src="script.js">
+
+    </script>
+
+</body>
+
+</html>
