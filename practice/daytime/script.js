@@ -24,7 +24,7 @@ function loadPhoto() {
         img.src = "img/tarde.jpg";
         document.body.style.backgroundColor = "#b9846f";
 
-    } else {
+    } else if (actualTime <= 23) {
         // Good evening
         msg.innerHTML += "<p>Good evening!<p>";
         img.src = "img/noite.jpg";
