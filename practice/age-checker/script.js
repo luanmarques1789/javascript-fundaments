@@ -26,7 +26,7 @@ function verifyData() {
             img.setAttribute('src', `img/${gen}/baby.png`);
         } else if (age <= 23) {
             img.setAttribute('src', `img/${gen}/young.png`)
-        } else if (age <= 55) { 
+        } else if (age <= 55) {
             img.setAttribute('src', `img/${gen}/adult.png`);
         } else if (age <= 106) {
             img.setAttribute('src', `img/${gen}/old.png`);
