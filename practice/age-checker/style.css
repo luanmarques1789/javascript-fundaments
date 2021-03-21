@@ -1,6 +1,7 @@
 body {
   background-color: #5585e6d2;
-  font: normal 15pt Arial;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
 }
 
 header {
@@ -8,6 +9,7 @@ header {
   margin: auto;
   color: white;
   text-align: center;
+  font-size: 1.1em;
 }
 
 section {

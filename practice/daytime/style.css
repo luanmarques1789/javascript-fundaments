@@ -1,8 +1,11 @@
+/* Utilizar a medida relativa em para tamanho de fontes,
+uma vez que a W3 faz a recomendação */
 header {
   width: 500px;
   margin: auto;
   color: white;
   text-align: center;
+  font-size: 1.4em;
 }
 
 section {
@@ -19,7 +22,7 @@ div {
   padding: 15px;
   margin-top: -10px;
   font-family: Helvetica, sans-serif;
-  font-size: 16pt;
+  font-size: 1.4em;
   font-weight: 500;
 }
 

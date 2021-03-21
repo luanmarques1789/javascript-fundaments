@@ -20,6 +20,7 @@ function verifyData() {
         alert("[ERROR!] The birthyear is invalid! Try again.");
     } else {
         res.style.textAlign = 'center';
+        res.style.fontSize = '1.2em';
         res.innerHTML = `<p> You are a ${gen} of ${age} years old! </p>`;
 
         if (age <= 10) {
