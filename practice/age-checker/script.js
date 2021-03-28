@@ -13,7 +13,7 @@ function verifyData() {
     var gen = sex ? "man" : "woman";
 
     let img = document.createElement('img');
-    img.setAttribute('class', 'photo'); // The attributes are the identifier following by their name
+    img.setAttribute('class', 'photo'); // The attributes are the identifier/selectors following by their name
 
     console.log(typeof (formYear)); // formYear is a String
     if (formYear == 0 || formYear > currentYear) {

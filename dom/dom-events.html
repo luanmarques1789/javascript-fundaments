@@ -7,53 +7,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Events</title>
 
-    <style>
-        div#area {
-            font: bold 20pt sans-serif;
-            color: white;
-            text-align: center;
-            line-height: 200px;
-            background-color: yellow;
-            width: 200px;
-            height: 200px;
-
-
-
-        }
-    </style>
 
 </head>
 
 <body>
-    <div id="area">
-        Click-me
+    <section>
 
-    </div>
+        <style contenteditable="true">
+            /* Optar sempre por classes como seletores CSS. Link do artigo que explica mais a respeito:
+        https://desenvolvimentoparaweb.com/css/nao-use-ids-como-seletores-css/ */
+
+            div.area {
+                /* It's my div's height*/
+                --high: 23vh;
+
+                font: bold clamp(1.2em, 1.8em, 2em) sans-serif;
+                text-align: center;
+                line-height: var(--high);
+                background-color: yellow;
+                width: 23vw;
+                height: var(--high);
+                
+                /* Centralização do cubo na tela */
+                position: absolute;
+                bottom: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+
+            }
+
+            span.span-click {
+                color: #000000;
+            }
+        </style>
+
+        <div class='area'>
+
+            <span class='span-click'> Click-me </span>
+
+        </div>
+    </section>
 
     <script>
-        var area = document.getElementById('area')
-        var content = area.textContent
-        area.addEventListener('click', clicar)
-        area.addEventListener('dblclick', dblClick)
-        area.addEventListener('mouseout', mouseOut)
-        area.addEventListener('mousemove', mouseMove)
+        var area = document.querySelector('div.area');
+        var content = area.textContent;
+        area.addEventListener('click', clicar);
+        area.addEventListener('dblclick', dblClick);
+        area.addEventListener('mouseout', mouseOut);
+        area.addEventListener('mousemove', mouseMove);
 
 
         function clicar() {
-            area.innerText = "Clicked!"
+            area.innerText = "Clicked!";
         }
 
         function dblClick() {
-            area.innerText = "Double"
+            area.innerText = "Double";
 
         }
 
         function mouseOut() {
-            //area.innerText(content)
+            area.style.backgroundColor = '#ffc4ff';
         }
 
         function mouseMove() {
-            area.style.background = 'black'
+            area.style.background = '#ffff00'
         }
 
     </script>
