@@ -10,37 +10,112 @@
 
 
         <style>
-            /* This a CSS code*/
-
-            body {
-
-                background-color: rgb(116, 116, 205);
-                color: white;
-                font: medium 15pt Arial;
+            html {
+                font-size: 62.5%;
             }
 
-            h1 {
+            p {
+                font-size: 1.6rem;
+            }
 
-                color: rgb(240, 116, 158)
+            legend {
+                background-color: yellow;
+                font: normal 16px Arial #000;
+                padding: 3px 10px;
+            }
+
+            fieldset {
+                border: 3px solid black;
+                margin-bottom: 5rem;
+            }
+
+
+            legend {
+                background-color: black;
+                color: white;
+                padding: 0.3rem 0.6rem;
+            }
+
+            .Container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100vw;
+                height: 100vh;
+                text-align: center;
+                padding: 2rem 10% 2rem 10%;
+                background-color: white;
+                overflow: hidden;
+            }
+
+            .Wrapper,
+            .Title,
+            .Footer {
+                display: inline-block;
+            }
+
+            .Container .Wrapper {
+                width: 900vw;
+                height: 90vh;
+                background-color: #ffb13c;
+                border-radius: 2rem;
+                text-align: center;
+            }
+
+            .Container .Wrapper .Title {
+                /* font-size: clamp(1.6rem, 3.6rem, 4.5rem); */
+                width: auto;
+                height: auto;
+                padding: 0rem 0rem 1rem 0rem;
+                /* border: 1px solid; */
+                /* background-color: rgba(48, 12, 211, 0.623); */
+            }
+
+            .Container .Footer {
+                font-size: 1.6rem;
+            }
+
+            .Label {
+                display: block;
+                margin-left: 2px;
+                margin-right: 2px;
+                padding-top: 0.35em;
+                padding-bottom: 0.625em;
+                padding-left: 0.75em;
+                padding-right: 0.75em;
+                border: 2px groove
             }
         </style>
     </head>
 
     <body>
-        <h1> Olá, mundo! </h1>
+        <section class="Container">
+            <div class="Container Wrapper">
+                <div class="Container Wrapper Title">
+                    <h1>
+                        Pesquisa de Satisfação Referente ao atendimento #Solicitacao
+                    </h1>
+                </div>
+                <section>
+                    <div>
 
-        <p> Já me livrei da maldição!</p>
+                    </div>
+                </section>
+                <div>
+                    <p>HELLO, WORLD!</p>
+                </div>
+                <fieldset>
+                    <legend>Olá</legend>
+                </fieldset>
 
-        <h1> Título </h1>
+                <div class="Label">
+                    <p>Oi</p>
+                </div>
+            </div>
 
-        <script>
-            //This a JS script
+            <footer class="Container Footer">&#xa9; Ápice Sistemas</footer>
+        </section>
 
-            var nome = window.prompt('Qual é o seu nome');
-            window.alert(nome);
-            window.confirm(nome + ' é o seu nome?');
-
-        </script>
     </body>
 
     </html>
