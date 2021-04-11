@@ -1,0 +1,115 @@
+<! This a HTML code>
+	<!DOCTYPE html>
+	<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Meu primeiro documento</title>
+
+		<style>
+			/* Ordem de precedência no CSS:
+             *  -De baixo para cima, isto é,
+             *   os estilos que estão estão mais 
+			 *	embaixo possuem prioridade aos demais. 
+             */
+
+			html {
+				font-size: 62.5%;
+			}
+
+			p {
+				font-size: 1.6rem;
+			}
+
+			.Container {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				width: 100vw;
+				height: 100vh;
+				text-align: center;
+				padding: 2rem 10% 2rem 10%;
+				background-color: white;
+				overflow: hidden;
+			}
+
+			.Wrapper,
+			.Title,
+			.Footer {
+				display: inline-block;
+			}
+
+			.Container .Wrapper {
+				width: 900vw;
+				height: 90vh;
+				background-color: #ffb13c;
+				border-radius: 2rem;
+				text-align: center;
+			}
+
+			.Container .Wrapper .Title {
+				/* font-size: clamp(1.6rem, 3.6rem, 4.5rem); */
+				width: auto;
+				height: auto;
+				padding: 0rem 0rem 1rem 0rem;
+				/* border: 1px solid; */
+				/* background-color: rgba(48, 12, 211, 0.623); */
+			}
+
+			fieldset {
+				border: 0.2rem solid black;
+				margin-bottom: 5rem;
+				background-color: #f0f0f0;
+			}
+
+			legend {
+				background-color: yellow;
+				font: normal 2rem Arial;
+				padding: 0.4rem 2rem;
+			}
+
+			.Container .Footer {
+				font-size: 1.6rem;
+			}
+
+			.Label {
+				display: block;
+				margin-left: 2px;
+				margin-right: 2px;
+				padding-top: 0.35em;
+				padding-bottom: 0.625em;
+				padding-left: 0.75em;
+				padding-right: 0.75em;
+				border: 2px groove;
+			}
+		</style>
+	</head>
+
+	<body>
+		<section class="Container">
+			<div class="Container Wrapper">
+				<div class="Container Wrapper Title">
+					<h1>Pesquisa de Satisfação Referente ao atendimento #Solicitacao</h1>
+				</div>
+				<section>
+					<div></div>
+				</section>
+				<div>
+					<p>HELLO, WORLD!</p>
+				</div>
+				<fieldset>
+					<legend>Olá</legend>
+				</fieldset>
+
+				<div class="Label">
+					<p>Oi</p>
+				</div>
+			</div>
+
+			<footer class="Container Footer">&#xa9; Ápice Sistemas</footer>
+		</section>
+	</body>
+
+	</html>

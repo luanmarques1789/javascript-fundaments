@@ -7,7 +7,7 @@ var person = {
     return `${this.firstName} ${this.lastName}`;
   },
   set fullName(value) {
-    const parts = value.split(" ", 2);
+    const parts = value.split(" ", 3);
     this.firstName = parts[0];
     this.lastName = `${parts[1]} ${parts[2]}`;
   },
