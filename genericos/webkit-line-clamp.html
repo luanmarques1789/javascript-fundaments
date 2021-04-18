@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Reset.css">
+    <title>webkit-line-clamp</title>
+
+    <style>
+        p.paragraphy {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            max-height: 50px;
+            color: black;
+            font-size: 20px;
+            background-color: #0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="paragraphy">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dolores, porro est ratione inventore
+        magni
+        sint earum optio quod a, nisi iure debitis asperiores repudiandae non maiores, esse odit voluptatibus!
+    </p>
+
+</body>
+
+</html>l
