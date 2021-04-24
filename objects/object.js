@@ -8,8 +8,8 @@ var person = {
   },
   set fullName(value) {
     const parts = value.split(" ", 3);
-    this.firstName = parts[0];
-    this.lastName = `${parts[1]} ${parts[2]}`;
+    firstName: parts[0];
+    lastName: `${parts[1]} ${parts[2]}`;
   },
 };
 
