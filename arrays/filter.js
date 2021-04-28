@@ -33,27 +33,32 @@ let list = [];
 // Returnig
 
 const people = [
-  { name: "Luan", age: 17 },
-  { name: "Matheus", age: 10 },
-  { name: "Guilherme", age: 50 },
-  { name: "Ana", age: 35 },
-  { name: "Mariana", age: 24 },
-  { name: "Renata", age: 40 },
-  { name: "João", age: 15 },
-  { name: "Fernades", age: 60 },
+	{ name: 'Luan', age: 17 },
+	{ name: 'Matheus', age: 10 },
+	{ name: 'Guilherme', age: 50 },
+	{ name: 'Ana', age: 35 },
+	{ name: 'Mariana', age: 24 },
+	{ name: 'Renata', age: 40 },
+	{ name: 'João', age: 15 },
+	{ name: 'Fernades', age: 60 },
 ];
 
-const greatestNamePeople = people.filter((obj) => obj.name.length > 7);
-console.log(greatestNamePeople);
+const filter = people.filter((obj, index) => index == 4);
+console.log(filter);
+const filterOfFilter = filter[0].name;
+console.log(filterOfFilter);
 
-console.log("-------------------");
+// const greatestNamePeople = people.filter((obj) => obj.name.length > 7);
+// console.log(greatestNamePeople);
 
-const greatestAgePeople = people.filter((obj) => obj.age < 20);
-console.log(greatestAgePeople);
+// console.log("-------------------");
 
-console.log("-------------------");
+// const greatestAgePeople = people.filter((obj) => obj.age < 20);
+// console.log(greatestAgePeople);
 
-const lastLetterPeople = people.filter((obj) =>
-  obj.name.toLowerCase().endsWith("s")
-);
-console.log(lastLetterPeople);
+// console.log("-------------------");
+
+// const lastLetterPeople = people.filter((obj) =>
+//   obj.name.toLowerCase().endsWith("s")
+// );
+// console.log(lastLetterPeople);
