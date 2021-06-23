@@ -3,18 +3,21 @@ const error = new CustomError();
 
 const myFunction1 = () => {
 	try {
-		throw new CustomError('baz', 'bazMessage');
+		throw error;
 	} catch (e) {
-		CustomError.handleError(e);
+		error.handleError(e);
 	}
 };
 
 const myFunction2 = () => {
+	const data = {
+		body: { username: 'SquareBeast', password: 'pass1234' },
+	};
 	try {
-		throw error.INCONSISTENT_FIELD('name');
+		throw error.customError(data, null);
 	} catch (e) {
-		console.error('ERR', e);
-		CustomError.handleError(e);
+		//console.error('ERR', e);
+		error.handleError(e);
 	}
 };
 
