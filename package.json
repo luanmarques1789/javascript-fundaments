@@ -17,6 +17,7 @@
 	},
 	"homepage": "https://github.com/luanmarques1789/javascript-fundaments#readme",
 	"dependencies": {
+		"axios": "^0.21.1",
 		"cep-promise": "^4.1.1",
 		"dotenv": "^10.0.0"
 	}

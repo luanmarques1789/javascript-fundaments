@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    /** Currying function
+    *  Receiving parcial values
+    */
+    const add = (a) => {
+      return (b) => {
+        return a + b;
+      };
+    };
+
+    console.group('Add');
+    const increment = add(1);
+    const res = increment(2);
+    console.log(res);
+    console.log(increment(5));
+    console.groupEnd();
+
+    console.group('Multiply');
+
+    const multiply = (a) => {
+      return (b) => {
+        return a * b;
+      };
+    };
+
+    const double = multiply(2);
+    console.log(double(4));
+    console.log(double(10));
+    console.log(multiply(1)(2));
+    console.log(multiply(1)(5));
+    console.log(multiply(7)(9));
+    console.log(multiply(8)(9));
+
+    console.groupEnd();
+    console.group('PointFree no arguments');
+
+    const numbers = [8, 4, 5, 10, 5, 9];
+
+    const res2 = numbers.map((value) => value * 2);
+    const res3 = numbers.map(double)
+    console.log(numbers);
+    console.log(res2);
+    console.log('pointfree ', res3);
+
+    const pair = (n) => {
+      return (n % 2) === 0; // logical return
+    }
+
+    const odd = (n) => {
+      return (n % 2) !== 0; // logical return
+    }
+
+    const label = 'time'
+    console.time(label)
+    const pairsNumbers = numbers.filter(pair)
+    const oddsNumbers = numbers.filter(odd)
+    console.timeLog(label)
+    console.log(pairsNumbers);
+    console.log(oddsNumbers);
+
+    console.groupEnd();
+    console.timeEnd(label)
+
+  </script>
+</body>
+
+</html>

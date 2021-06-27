@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    /**
+     * Handling errors for sync and async methods must be 
+     * handled individually
+     */
+    const debug1 = () => {
+      try {
+        // My promise
+        fetch('https://jsonplaceholder.typicode.com/users')
+          .then(function (d) {
+            return JSON.parse(d);
+          })
+          .then(console.log)
+          .catch(ex => {
+            console.error("IT'S NOT POSSIBLE CONVERT THIS DATA", ex)
+          });
+      } catch (ex) {
+        console.error('ERRO AQUI!', ex)
+      }
+    }
+
+    /**
+     * THERE'RE NOT differences in handling errors in sync functions 
+     * for async/await functions
+    */
+    const debug2 = async () => {
+      try {
+
+        const users = await fetch('https://jsonplaceholder.typicode.com/users');
+        const data = JSON.parse(users);
+        console.log(users);
+
+      } catch (error) {
+        console.error('ERRO NO CATCH', error);
+      } finally {
+        console.log('THIS BLOCK WILL BE ALWAYS RUN ');
+      }
+    }
+
+    debug2();
+  </script>
+</body>
+
+</html>
