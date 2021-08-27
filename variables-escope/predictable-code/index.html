@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // every
+    // All sentences must be true 
+    const answersUser = {
+      name: 'Ayrton',
+      answers: [
+        { id: 001, scored: false },
+        { id: 002, scored: false },
+        { id: 003, scored: false },
+        { id: 004, scored: false },
+        { id: 005, scored: false },
+      ]
+    }
+
+    let allScored = true;
+
+    const { answers } = answersUser;
+
+    for (let i = 0; i < answers.length; i++) {
+      if (!answers[i].scored) {
+        allScored = false;
+        break;
+      }
+    }
+    console.group('Every');
+    console.log('allScored using for loop', allScored);
+
+    const allScoredByEvery = answers.every((answerValue) => answerValue.scored)
+    console.log('allScoredByEvery', allScoredByEvery)
+
+    console.groupEnd('Every');
+
+
+
+    // some
+    // Only one sentence must be `true` for returning `true`
+
+    const allScoredBySome = answers.some((answerValue) => answerValue.scored);
+    console.group('Some');
+    console.log(allScoredBySome);
+    console.groupEnd('Some');
+
+    // flat
+
+    const answersUsers = [{
+      name: 'Ayrton',
+      answers: [
+        { id: 001, scored: false },
+        { id: 002, scored: false },
+        { id: 003, scored: false },
+        { id: 004, scored: false },
+        { id: 005, scored: false },
+      ]
+    },
+    {
+      name: 'Roger',
+      answers: [
+        { id: 001, scored: false },
+        { id: 002, scored: true },
+        { id: 003, scored: false },
+        { id: 004, scored: true },
+        { id: 005, scored: false },
+      ]
+    },
+    {
+      name: 'Maria',
+      answers: [
+        { id: 001, scored: true },
+        { id: 002, scored: true },
+        { id: 003, scored: true },
+        { id: 004, scored: true },
+        { id: 005, scored: true },
+      ]
+    },
+    {
+      name: 'Chris',
+      answers: [
+        { id: 001, scored: false },
+        { id: 002, scored: true },
+        { id: 003, scored: true },
+        { id: 004, scored: true },
+        { id: 005, scored: false },
+      ]
+    },
+
+    ]
+    // flatMap
+    // entries
+    // fromEntries
+    // padStart and padEnd  
+
+    /**
+     * Other features...
+     * trim
+     * includes
+     * find
+     * findIndex
+    */
+
+  </script>
+</body>
+
+</html>
