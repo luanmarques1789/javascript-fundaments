@@ -5,10 +5,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class</title>
+  <title>Document</title>
+  <!-- <script type="module" src="Person.js" async></script> -->
+  <!-- <script type="module" src="Developer.js" async></script> -->
+  <script type="module">
+    import Person from './Person.js';
+    import Developer from './Developer.js';
+    const person = new Person('eduardo');
+    person.name = 'josé';
+    person.greetings();
+    person.walk();
+
+    const dev = new Array();
+    dev.push(new Developer('luan', 'Python'));
+
+    dev.push(new Developer('bert', 'JavaScript'));
+
+    dev.map(developer => {
+      const $root = document.querySelector("#root");
+      $root.innerHTML += `<li>${developer.name}</li>`;
+      $root.innerHTML += `<p>${developer.code()}</p>`;
+    }
+    );
+  </script>
 </head>
 
 <body>
+
+  <h1>Testing classes</h1>
+  <div id="root"></div>
 </body>
 
 </html>
